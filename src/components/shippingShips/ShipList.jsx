@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./ShipList.css";
 import {
   deleteShip,
   getShipsWithTheirHaulers,

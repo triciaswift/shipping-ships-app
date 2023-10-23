@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { getAllShips } from "../services/shipService";
-import { getAllHaulers } from "../services/hualerService";
-import { getAllDocks } from "../services/dockService";
+import { getAllShips } from "../../services/shipService";
+import { getAllHaulers } from "../../services/hualerService";
+import { getAllDocks } from "../../services/dockService";
 
-export const ShippingList = () => {
+export const AllList = () => {
   const [ships, setShips] = useState([]);
   const [haulers, setHaulers] = useState([]);
   const [docks, setDocks] = useState([]);
