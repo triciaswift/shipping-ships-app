@@ -21,21 +21,21 @@ export const ShippingList = () => {
   }, []);
 
   return (
-    <section className="categories">
+    <section className="flex justify-evenly">
       <div>
-        <header>Ships</header>
+        <header className="text-2xl font-bold">Ships</header>
         {ships.map((ship) => {
           return <div key={ship.id}>{ship.name}</div>;
         })}
       </div>
       <div>
-        <header>Haulers</header>
+        <header className="text-2xl font-bold">Haulers</header>
         {haulers.map((hauler) => {
           return <div key={hauler.id}>{hauler.name}</div>;
         })}
       </div>
       <div>
-        <header>Docks</header>
+        <header className="text-2xl font-bold">Docks</header>
         {docks.map((dock) => {
           return <div key={dock.id}>{dock.location}</div>;
         })}
