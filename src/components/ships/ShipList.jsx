@@ -25,13 +25,19 @@ export const ShipList = () => {
   };
 
   return (
-    <>
+    <div className="flex flex-col">
+      <div className="flex justify-evenly">
+        <span className="text-2xl font-bold">SHIP NAME</span>
+        <span className="text-2xl font-bold">HAULER NAME</span>
+        <span> </span>
+      </div>
       {ships.map((ship) => {
         return (
-          <div className="ship-container" key={ship.id}>
-            <div>Ship: {ship.name}</div>
-            <div className="hauler-name">Hauler: {ship.hauler?.name}</div>
+          <div className="flex justify-evenly my-3" key={ship.id}>
+            <div>{ship.name}</div>
+            <div>{ship.hauler?.name}</div>
             <button
+              className="border-2 border-cyan-500 p-0.5 bg-cyan-500/50 hover:bg-cyan-500 rounded-md"
               onClick={() => {
                 handleDelete(ship.id);
               }}
@@ -41,6 +47,6 @@ export const ShipList = () => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
