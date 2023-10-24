@@ -25,19 +25,31 @@ export const AllList = () => {
       <div>
         <header className="text-2xl font-bold">Ships</header>
         {ships.map((ship) => {
-          return <div key={ship.id}>{ship.name}</div>;
+          return (
+            <div key={ship.id} className="text-center">
+              {ship.name}
+            </div>
+          );
         })}
       </div>
       <div>
         <header className="text-2xl font-bold">Haulers</header>
         {haulers.map((hauler) => {
-          return <div key={hauler.id}>{hauler.name}</div>;
+          return (
+            <div key={hauler.id} className="text-center">
+              {hauler.name}
+            </div>
+          );
         })}
       </div>
       <div>
         <header className="text-2xl font-bold">Docks</header>
         {docks.map((dock) => {
-          return <div key={dock.id}>{dock.location}</div>;
+          return (
+            <div key={dock.id} className="text-center">
+              {dock.location}
+            </div>
+          );
         })}
       </div>
     </section>
